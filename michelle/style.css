@@ -1,0 +1,450 @@
+@charset "utf-8";
+/* CSS Document */
+/*Use class names only*/
+@media (max-width: 600px){
+}
+
+@font-face {
+	font-family: "Jellee Bold";
+	src: url("Jellee-Bold.otf") format("opentypeformat");
+	src: url("Jellee-Roman.ttf") format("truetype");
+}
+
+* {
+	font-family: "Jellee Bold",  Impact, Charcoal, sans-serif;
+}
+html {
+	height: auto;
+	width: 100%;
+}
+html {
+	background: url("leaf4.PNG") left no-repeat, url("leaf_all.png") right top no-repeat;
+	background-position: -595px 40px, 1000px -500px ;
+	background-size: 1400px, 2000px;
+	background-color: #FAF8E9;
+}
+.page-wrapper {
+	/*background-color: indianred;*/
+	width: 100%;
+	height: auto;
+}
+
+
+/*
+////// self - citations below
+
+This file based on 'Plant Children' from Michelle Gee
+	You may use this file as a foundation for any new work, but you may find it easier to start from scratch.
+	All images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. 
+
+////// image citations below
+All images released under Creative Commons License cc0 
+https://creativecommons.org/publicdomain/zero/1.0/
+	- icon.svg 
+	- lavender.svg
+	- leaf4.png
+	- leaf_all.png
+	- cornerL.png
+	- cornerR.png
+	- sun.png
+
+
+
+////// font citations below
+Font used - Jellee - 
+Licensing: "This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is available with a FAQ at:
+http://scripts.sil.org/OFL"
+
+*/
+
+/*-------------------------------Header-------------------------------*/
+header {
+	/*background-color:rgba(118,172,118,0.50);*/
+	position: absolute;
+	width: 900px;
+	height: 175px;
+	top: 0px;	
+}
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+header::before {
+    content: "";
+	background: url("sun.PNG") no-repeat 0 0;
+	display: inline-block;
+	width: 165px;
+	height: 175px;
+	background-size: 100%;
+	position:relative;
+	z-index: -1;
+}
+header::before {
+	-webkit-animation: spin 10s linear infinite;
+  	-moz-animation: spin 10s linear infinite;
+  	-ms-animation: spin 10s linear infinite;
+  	-o-animation: spin 10s linear infinite;
+	
+}
+.intro {
+	width: 200px;
+    height: auto;  
+	margin-top: -85px;
+	margin-left: 10px;
+}
+.intro header h1{
+	font-size: 90px;
+	margin-left: 65px;
+	margin-top: -145px;
+	color: #272b24;
+	z-index: 15;
+}
+.intro header h2{
+	font-size: 30px;
+	font-style: italic;
+	margin-left: 125px;
+	margin-top: -85px;
+	color: #546346
+}
+
+/*---------------------------Left Side Bar ---------------------------*/
+.summary{
+	background-color:rgba(252,252,252,0.75);
+	border-radius: 5px 25px 0 0;
+	position: absolute;
+	width: 175px;
+	top: 185px;
+	left: 50px;
+	padding-top: 5px ;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 12px;
+	color: #383D33;
+	border-left:  1px solid rgba(44,44,44,0.15);
+	border-right:  1px solid rgba(44,44,44,0.15);
+	border-top:  1px solid rgba(44,44,44,0.15);
+}
+.summary a {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    color: #b494fc;
+    text-decoration: none;
+    -moz-transition: border-color 0.2s ease-in-out;
+    -ms-transition: border-color 0.2s ease-in-out;
+    -o-transition: border-color 0.2s ease-in-out;
+    -webkit-transition: border-color 0.2s ease-in-out;
+    transition: border-color 0.2s ease-in-out;
+} 
+.sidebar {
+	background:rgba(252,252,252,0.75);
+	text-align: center;
+	border-radius: 0 0 45px 5px ;
+	width: 175px;
+	position: absolute;
+	top: 346px;
+	left: 50px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+	color:#383D33;
+	border-left: 1px solid rgba(44,44,44,0.15);
+	border-right:  1px solid rgba(44,44,44,0.15);
+	border-bottom:  1px solid rgba(44,44,44,0.15);
+}
+.sidebar nav ul li {
+	font-size: 12px;
+}
+.sidebar nav ul li .designer-name{
+	font-size: 10px;
+}
+.sidebar li {
+    float: none;
+    width: auto;
+    padding-left: 0;
+    padding-right: 0;
+	text-align: left;
+}
+
+.sidebar .design-selection nav ul li a::before {
+	content: "\a";
+	white-space: pre;
+}
+/*---------------------------Side Bar Icon ---------------------------*/
+aside .select {
+	font-size: 15px;
+	color: #bb9cba;
+}
+.sidebar .design-selection nav ul{
+	list-style-type: none;
+	text-align: left
+}
+.sidebar .design-selection nav ul li:before {
+	content: '';
+  	display: inline-block;
+  	height: 20px;
+  	width: 20px;
+   	background-size: 20px;
+  	background-image: url("icon.svg");
+  	background-repeat: no-repeat;
+	margin-left: -40px;	
+	margin-bottom: -35px;
+}
+
+nav ul li a.design-name:link  {
+	color: #383D33;
+	text-decoration: none;
+}
+nav ul li a.design-name:hover  {
+	color: #9971f3;
+	text-decoration: none;
+}
+nav ul li a.design-name:visited  {
+	color: #7d49f4;
+	text-decoration: none;
+}
+nav ul li a.design-name:active  {
+	color: #6526f5;
+	text-decoration: none;
+}
+nav ul li a.designer-name:link  {
+	color: #383D33;
+	text-decoration: none;
+}
+nav ul li a.designer-name:hover  {
+	color: #7d49f4;
+	text-decoration: none;
+}
+nav ul li a.designer-name:visited  {
+	color: #6526f5;
+	text-decoration: none;
+} 
+aside .archives {
+	font-size: 15px;
+	color: #bb9cba;
+}
+.design-archives nav ul {
+	list-style-type: none;
+	text-align: left;
+	font-size: 12px;
+}
+.design-archives nav ul li:before {
+	content: '';
+  	display: inline-block;
+  	height: 30px;
+  	width: 30px;
+   	background-size: 30px;
+  	background-image: url("lavender.svg");
+  	background-repeat: no-repeat;
+	margin-left: -40px;	
+}
+
+.design-archives nav ul li a:link {
+	color: #383D33;
+	text-decoration: none;
+}
+.design-archives nav ul li a:hover {
+	color: #869279;
+	text-decoration: none;
+}
+.design-archives nav ul li a:visited {
+	color: #737d68;
+	text-decoration: none;
+}
+.design-archives nav ul li a:active {
+	color: #495042;
+	text-decoration: none;
+}
+aside .resources {
+	font-size: 15px;
+	color: #bb9cba;
+}
+.zen-resources ul {
+	list-style-type: none;
+	text-align: left;
+	font-size: 12px;
+}
+.zen-resources ul li:before {
+	content: '';
+  	display: inline-block;
+  	height: 30px;
+  	width: 30px;
+   	background-size: 30px;
+  	background-image: url("lavender.svg");
+  	background-repeat: no-repeat;
+	margin-left: -40px;	
+}
+.zen-resources ul li a:link {
+	color: #383D33;
+	text-decoration: none;
+}
+.zen-resources ul li a:hover {
+	color: #606856;
+	text-decoration: none;
+}
+/*------------------------------Body -------------------------------------*/
+.preamble{
+	background: url("cornerL.PNG") left top no-repeat, url("cornerR.png") right bottom no-repeat;
+	background-size: 145px;
+	background-color:rgba(252,252,252,0.75);
+	position: relative;
+	border-radius: 55px;
+	border: 1px solid rgba(44,44,44,0.15);
+	text-align: center;
+	width: 405px;
+	top: 250px;
+	left: 550px;
+	padding: 35px 45px;
+	
+}
+.preamble h3 {
+	font-size: 18px;
+}
+.preamble p {
+	font-size: 15px;
+}
+.explanation{
+	background: url("cornerL.PNG") left top no-repeat, url("cornerR.png") right bottom no-repeat;
+	background-size: 145px;
+	background-color:rgba(252,252,252,0.75);
+	position: relative;
+	border-radius: 55px;
+	border: 1px solid rgba(44,44,44,0.15);
+	text-align: center;
+	width: 470px;
+	top: 275px;
+	left: 455px;
+	padding: 35px 45px;
+}
+.explanation h3 {
+	font-size: 18px;
+}
+.explanation p {
+	font-size: 15px;
+}
+.participation{
+	background: url("cornerL.PNG") left top no-repeat, url("cornerR.png") right bottom no-repeat;
+	background-size: 145px;
+	background-color:rgba(252,252,252,0.75);
+	position: relative;
+	border-radius: 55px;
+	border: 1px solid rgba(44,44,44,0.15);
+	text-align: center;
+	width: 400px;
+	top: -515px;
+	left: 1190px;
+	padding: 35px 45px;
+}
+.participation a {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    color: #b494fc;
+    text-decoration: none;
+    -moz-transition: border-color 0.2s ease-in-out;
+    -ms-transition: border-color 0.2s ease-in-out;
+    -o-transition: border-color 0.2s ease-in-out;
+    -webkit-transition: border-color 0.2s ease-in-out;
+    transition: border-color 0.2s ease-in-out;
+} 
+.participation a:hover {
+    color: #9971f3;
+	text-decoration: none;
+} 
+.participation h3 {
+	font-size: 18px;
+}
+.participation p {
+	font-size: 15px;
+}
+.benefits{
+	background: url("cornerL.PNG") left top no-repeat, url("cornerR.png") right bottom no-repeat;
+	background-size: 145px;
+	background-color:rgba(252,252,252,0.75);
+	position: relative;
+	border-radius: 55px;
+	border: 1px solid rgba(44,44,44,0.15);
+	text-align: center;
+	width: 365px;
+	top: -490px;
+	left: 1075px;
+	padding: 35px 45px;
+}
+.benefits h3 {
+	font-size: 18px;
+}
+.benefits p {
+	font-size: 15px;
+}
+.requirements{
+	background: url("cornerL.PNG") left top no-repeat, url("cornerR.png") right bottom no-repeat;
+	background-size: 145px;
+	background-color:rgba(252,252,252,0.75);
+	border-radius: 55px;
+	border: 1px solid rgba(44,44,44,0.15);
+	text-align: center;
+	position: relative;
+	width: 1390px;
+	top: -455px;
+	left: 300px;
+	padding: 35px 45px;
+}
+.requirements a {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    color: #b494fc;
+    text-decoration: none;
+    -moz-transition: border-color 0.2s ease-in-out;
+    -ms-transition: border-color 0.2s ease-in-out;
+    -o-transition: border-color 0.2s ease-in-out;
+    -webkit-transition: border-color 0.2s ease-in-out;
+    transition: border-color 0.2s ease-in-out;
+} 
+.requirements a:hover {
+    color: #9971f3;
+	text-decoration: none;
+} 
+.requirements h3 {
+	font-size: 18px;
+}
+.requirements p {
+	font-size: 15px;
+}
+/* footer */
+footer{
+	background-color:rgba(252,252,252,0.55);
+	border-radius: 5px;
+	border: 1px solid rgba(44,44,44,0.15);
+	text-align: center;
+	align-content: center;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -300px;
+	width: 200px;
+	top: auto;
+	left: auto;
+	right: auto;
+}
+footer a {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    color: #b494fc;
+    text-decoration: none;
+    -moz-transition: border-color 0.2s ease-in-out;
+    -ms-transition: border-color 0.2s ease-in-out;
+    -o-transition: border-color 0.2s ease-in-out;
+    -webkit-transition: border-color 0.2s ease-in-out;
+    transition: border-color 0.2s ease-in-out;
+} 
+footer a:hover {
+    color: #9971f3;
+	text-decoration: none;
+} 
